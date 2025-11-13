@@ -84,7 +84,7 @@ logger = logging.getLogger("LetsExtract-v4.4")
 # ---------------- Config ----------------
 class CFG:
     APP_NAME = "LetsExtract Pro Max v4.4 - Refined Unified Edition"
-    MAX_THREADS = 200
+    MAX_THREADS = 20
     REQUEST_TIMEOUT = 15  # reduced from 30 to 15 for faster fallback
     DEFAULT_CRAWL_DEPTH = 3
     USER_AGENTS = [
@@ -93,11 +93,9 @@ class CFG:
         'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     ]
     COMMON_PATHS = [
-        '/contact', '/contact-us', '/contactus', '/about', '/about-us', '/aboutus',
-        '/team', '/our-team', '/support', '/help', '/sitemap', '/sitemap.xml',
-        '/اتصل-بنا', '/تواصل-معنا', '/من-نحن', '/فريقنا'
+        '/contact', '/about', '/about-us', '/team', '/support', '/sitemap', '/sitemap.xml'
     ]
-    CONTEXT_KEYWORDS = ['contact', 'email', 'e-mail', 'info', 'support', 'sales', 'hr', 'jobs', 'careers']
+    CONTEXT_KEYWORDS = ['contact', 'email', 'e-mail', 'info', 'support', 'sales', 'hr', 'jobs', 'careers', 'admin']
 
 # ---------------- Utilities ----------------
 def random_headers(referer: Optional[str] = None) -> Dict[str, str]:
